@@ -21,7 +21,7 @@
 
 .Calculator {
   box-sizing: border-box;
-  width: 300px;
+  width: 320px;
   max-width: 100%;
   padding: 12px;
   background-color: white;
@@ -31,11 +31,15 @@
 
 .Display {
   box-sizing: border-box;
-  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 65px;
   margin-bottom: 12px;
   padding: 8px 15px;
-  text-align: right;
-  font-size: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.8em;
   background-color: #fbdcec;
   border: 2px solid #d6439a;
   border-radius: 18px;
@@ -71,4 +75,10 @@
 .eqButton {
   color: white;
   background-color: #d6439a;
+}
+
+.nameButton{
+  margin-top: 10px;
+  width: 290px;
+  background-color: lavender;
 }
