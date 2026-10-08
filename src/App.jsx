@@ -48,16 +48,20 @@ function App() {
   const equalButtonClickHandler = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
+    let result;
 
     if(operation === "+"){
-      setDisp(parseInt(operand1) + parseInt(operand2));
+      result = setDisp(parseInt(operand1) + parseInt(operand2));
     } else if(operation === "-") {
-      setDisp(parseInt(operand1) - parseInt(operand2));
+      result = setDisp(parseInt(operand1) - parseInt(operand2));
     } else if(operation === "*") {
-      setDisp(parseInt(operand1) * parseInt(operand2));
+      result = setDisp(parseInt(operand1) * parseInt(operand2));
     } else if(operation === "÷") {
-      setDisp(parseInt(operand1) / parseInt(operand2));
+      result = setDisp(parseInt(operand1) / parseInt(operand2));
     }
+    setOperand1(result);
+    setOperand2(null);
+    setOperator(null);
   }
 
   const operationButtonClickHandler = (e) => {
@@ -120,7 +124,7 @@ function App() {
           <CalcButton buttonLabel="=" buttonClassName="eqButton" onClick = {equalButtonClickHandler}/>
           <CalcButton buttonLabel="+" buttonClassName="opButton" onClick = {operationButtonClickHandler}/>
         </div>
-        <CalcButton buttonLabel="Jeirus Kahlil T. Cruz" buttonClassName="nameButton" onClick = {nameplateButtonClickHandler}/>
+        <CalcButton buttonLabel="Cruz" buttonClassName="nameButton" onClick = {nameplateButtonClickHandler}/>
       </div>
     </div>
   );
