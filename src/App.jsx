@@ -48,20 +48,28 @@ function App() {
   const equalButtonClickHandler = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
-    let result;
 
     if(operation === "+"){
-      result = setDisp(parseInt(operand1) + parseInt(operand2));
+      setDisp(parseInt(operand1) + parseInt(operand2));
+      setOperand1(parseInt(operand1) + parseInt(operand2));
+      setOperand2(null);
+      setOperator(null);
     } else if(operation === "-") {
-      result = setDisp(parseInt(operand1) - parseInt(operand2));
+      setDisp(parseInt(operand1) - parseInt(operand2));
+      setOperand1(parseInt(operand1) - parseInt(operand2));
+      setOperand2(null);
+      setOperator(null);
     } else if(operation === "*") {
-      result = setDisp(parseInt(operand1) * parseInt(operand2));
+      setDisp(parseInt(operand1) * parseInt(operand2));
+      setOperand1(parseInt(operand1) * parseInt(operand2));
+      setOperand2(null);
+      setOperator(null);
     } else if(operation === "÷") {
-      result = setDisp(parseInt(operand1) / parseInt(operand2));
+      setDisp(parseInt(operand1) / parseInt(operand2));
+      setOperand1(parseInt(operand1) / parseInt(operand2));
+      setOperand2(null);
+      setOperator(null);
     }
-    setOperand1(result);
-    setOperand2(null);
-    setOperator(null);
   }
 
   const operationButtonClickHandler = (e) => {
