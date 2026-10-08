@@ -53,22 +53,22 @@ function App() {
       setDisp(parseInt(operand1) + parseInt(operand2));
       setOperand1(parseInt(operand1) + parseInt(operand2));
       setOperand2(null);
-      setOperator(null);
+      setOperation(null);
     } else if(operation === "-") {
       setDisp(parseInt(operand1) - parseInt(operand2));
       setOperand1(parseInt(operand1) - parseInt(operand2));
       setOperand2(null);
-      setOperator(null);
+      setOperation(null);
     } else if(operation === "*") {
       setDisp(parseInt(operand1) * parseInt(operand2));
       setOperand1(parseInt(operand1) * parseInt(operand2));
       setOperand2(null);
-      setOperator(null);
+      setOperation(null);
     } else if(operation === "÷") {
       setDisp(parseInt(operand1) / parseInt(operand2));
       setOperand1(parseInt(operand1) / parseInt(operand2));
       setOperand2(null);
-      setOperator(null);
+      setOperation(null);
     }
   }
 
